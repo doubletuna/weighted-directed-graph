@@ -1,0 +1,30 @@
+.main-wrapper {
+  width: 100%;
+
+  .header {
+    width: fit-content;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .select-section {
+    margin: auto;
+    width: 300px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .select-option {
+      width: 110px;
+      height: 22px;
+      border-radius: 5px;
+      margin: 5px;
+    }
+  }
+
+  .result {
+    padding: 10px;
+    text-align: center;
+  }
+}
