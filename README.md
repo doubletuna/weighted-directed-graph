@@ -1,6 +1,7 @@
 
 
-# Dijkstra’s algorithm, finding the shortest path in JavaScript.
+# Dijkstra’s algorithm
+Find the shortest path in a weighted directed graph, JavaScript.
 
 well.. with nodejs express & react..
 
