@@ -78,6 +78,7 @@ const Main = () => {
         </div>
       }
       <Graph from={from} to={to} />
+      <div className="github"><a href="https://github.com/doubletuna/weighted-directed-graph" target="_blank" rel="noopener noreferrer">Dev by DoubleTuna</a></div>
     </div>
   )
 }

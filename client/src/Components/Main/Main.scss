@@ -27,4 +27,14 @@
     padding: 10px;
     text-align: center;
   }
+
+  .github{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    a {
+      color: #000000;
+    }
+  }
 }

@@ -10,11 +10,8 @@ interface GraphProps {
 
 const Graph = (props: GraphProps) => {
 
-  const handleClick = (e: any) => {
-    console.log(e.pageX - 413, e.pageY - 169)
-  }
   return (
-    <div className="graph-wrapper" onClick={handleClick}>
+    <div className="graph-wrapper" >
       {
         constants.nodes.map(n => {
           return <div key={n} className={`node ${n.toLowerCase()}${props.from === n ? ' active-from' : ''}${props.to === n ? ' active-to' : ''}`}>{n}</div>
