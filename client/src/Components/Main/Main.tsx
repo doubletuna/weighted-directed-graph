@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Result from '../Result/Result'
+import Graph from '../Graph/Graph'
 import './Main.scss'
 
 const Main = () => {
@@ -68,12 +69,15 @@ const Main = () => {
         }
       </div>
       {
-        from && to && distance &&
-        <div className="result">
-          <Result from={from} to={to} distance={distance} />
+        (from && to && distance &&
+          <div className="result">
+            <Result from={from} to={to} distance={distance} />
+          </div>)
+        || <div className="result">
+          Choose from/to
         </div>
-
       }
+      <Graph from={from} to={to} />
     </div>
   )
 }
