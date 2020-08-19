@@ -14,9 +14,7 @@ const port = process.env.PORT || 3001;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }))
 
-const mainRoutes = require('./routes/main')
 const routeRoutes = require('./routes/route')
-app.use(mainRoutes)
 app.use(routeRoutes)
 
 app.listen(port, () => {
