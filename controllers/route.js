@@ -3,11 +3,11 @@ const { constants } = require('../constants')
 const _ = require('lodash')
 
 exports.getRoute = async (req, res, next) => {
-  
+
   const startNode = req.params.start
   const endNode = req.params.end
 
-  const routes = constants.ROUTES; 
+  const routes = constants.ROUTES;
   let nodes = Object.assign({}, constants.NODES);
   const visited = []
 
@@ -17,11 +17,11 @@ exports.getRoute = async (req, res, next) => {
         nodes[node] = 0
       }
       visited.push(node)
-      _.forEach(routes[node], (n, key) => {
-        if (nodes[key] > nodes[node] + n) {
-          nodes[key] = nodes[node] + n
+      _.forEach(_.sortBy(routes[node], ['value'], ['asc']), n => {
+        if (nodes[n.key] > nodes[node] + n.value) {
+          nodes[n.key] = nodes[node] + n.value
         }
-        findRoute(key)
+        findRoute(n.key)
       })
     }
     return nodes;
