@@ -3,7 +3,7 @@ import './DirectedCurve.scss'
 import { ILine } from '../../Interface/interface'
 interface IDirectedCurveProps {
   path: string
-  lines: ILine[] // need to create interface for this..
+  lines: ILine[]
 }
 
 const DirectedCurve: React.FC<IDirectedCurveProps> = ({path, lines}: IDirectedCurveProps) => {
