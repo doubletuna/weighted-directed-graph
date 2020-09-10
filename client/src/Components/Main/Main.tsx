@@ -3,10 +3,9 @@ import Result from '../Result/Result'
 import Graph from '../Graph/Graph'
 import './Main.scss'
 
-const Main = () => {
-  const [from, setFrom] = useState<string>()
-  const [to, setTo] = useState<string>()
-  // const [resultsArray, setResultsArray] = useState<[]>()
+const Main: React.FC = () => {
+  const [from, setFrom] = useState<string>('DEFAULT')
+  const [to, setTo] = useState<string>('DEFAULT')
   const [distance, setDistance] = useState<number>()
 
   const [nodes] = React.useState([
@@ -20,7 +19,7 @@ const Main = () => {
 
   const handleFromChange = (e: any) => {
     setFrom(e.target.value)
-    setTo('')
+    setTo('DEFAULT')
   }
 
   const handleToChange = (e: any) => {
@@ -42,7 +41,7 @@ const Main = () => {
         Dijkstra’s algorithm, finding the shortest path in JavaScript
       </div>
       <div className="select-section">
-        <select className="select-option" onChange={handleFromChange} defaultValue="DEFAULT" >
+        <select className="select-option" value={from} onChange={handleFromChange}  >
           <option value="DEFAULT" disabled hidden>Choose "from"</option>
           {nodes.map(node => (
             <option
@@ -55,7 +54,7 @@ const Main = () => {
         </select>
         {
           from &&
-          <select className="select-option" onChange={handleToChange} defaultValue="DEFAULT" >
+          <select className="select-option" value={to} onChange={handleToChange}  >
             <option value="DEFAULT" disabled hidden>Choose "to"</option>
             {nodes.filter(n => n.value !== from).map(node => (
               <option

@@ -2,7 +2,7 @@
 const { constants } = require('../constants')
 const _ = require('lodash')
 
-exports.getRoute = async (req, res, next) => {
+exports.getRoute = async (req, res) => {
 
   const startNode = req.params.start
   const endNode = req.params.end
