@@ -2,11 +2,10 @@
   "name": "zero21",
   "version": "1.0.0",
   "description": "0 -> 1",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
-    "start-demon": "nodemon app.js",
+    "start": "node src/app.js",
+    "start-demon": "nodemon src/app.js",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "author": "Danny",
